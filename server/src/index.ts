@@ -11,7 +11,13 @@ import userRoutes from "./routes/user";
 const app = express();
 
 app.use(bodyparser.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin:[],
+    methods:["POST","GET","DELETE","PUT"],
+    credentials:true
+  }
+));
 
 app.use("/auth", authRoutes);
 app.use("/task", taskRoutes);
