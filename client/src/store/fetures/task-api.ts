@@ -55,7 +55,7 @@ export interface deleteTaskRTKInterface {
 export const taskApi = createApi({
   reducerPath: "taskApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080",
+    baseUrl: "https://task-manager-final-api.vercel.app",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("userToken");
       headers.set("Authorization", `Bearer ${token}`);

@@ -32,12 +32,12 @@ function SignUp() {
   const [successMessage, setSuccessMessage] = useState<string>("");
 
   const navigation = useNavigate();
-
+  axios.defaults.withCredentials=true;
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     console.log(data);
     try {
       const signUpRespond = await axios.post(
-        "http://localhost:8080/user/signup",
+        "https://task-manager-final-api.vercel.app/user/signup",
         {
           email: data.email,
           name: data.name,
