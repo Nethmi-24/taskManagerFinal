@@ -37,7 +37,7 @@ function SignUp() {
     console.log(data);
     try {
       const signUpRespond = await axios.post(
-        "https://task-manager-final-api.vercel.app/user/signup",
+        "https://task-manager-final-server.vercel.app/user/signup",
         {
           email: data.email,
           name: data.name,
